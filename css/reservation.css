@@ -230,6 +230,13 @@
   transition: background 0.2s, opacity 0.2s;
   border-radius: 2px;
 }
+
+@media (min-width: 768px) {
+  .rv-submit {
+    width: 320px;
+    margin: 0 auto;
+  }
+
 .rv-submit:hover { background: var(--gold-light); }
 .rv-submit:disabled {
   opacity: 0.5;

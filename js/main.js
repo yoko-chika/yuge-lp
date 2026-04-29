@@ -17,7 +17,17 @@
   }
 
   window.closePopup = closePopup;   // グローバル公開（onclick属性から呼べる）
+  // popup-x
+document.getElementById('popup-x').addEventListener('click', function() {
+  closePopup();
+});
 
+// popup-btn
+document.querySelector('.popup-btn').addEventListener('click', function() {
+  closePopup();
+  location.href = '#plans';
+});
+  
   // オーバーレイ背景クリックで閉じる
   var overlay = document.getElementById('popup-overlay');
   if (overlay) {
@@ -33,6 +43,18 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closePopup();
   });
+
+  /* ---------- Hero スライドショー ---------- */
+var slides = document.querySelectorAll('.hero-slides .hero-img');
+if (slides.length > 1) {
+  var currentSlide = 0;
+  setInterval(function() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 4000);
+}
+
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-q').forEach(function (q) {

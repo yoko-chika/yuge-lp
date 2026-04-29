@@ -38,7 +38,7 @@
 <!-- ① POPUP CAMPAIGN OVERLAY -->
 <div id="popup-overlay">
   <div id="popup-box">
-    <button id="popup-x" onclick="closePopup()">✕</button>
+    <button id="popup-x">✕</button>
     <div class="popup-img-wrap">
       <img src="img/sauna_inside.jpg" alt="YUGE 内観">
       <div class="popup-img-overlay">
@@ -54,7 +54,7 @@
         <p class="popup-coupon-label">Coupon Code</p>
         <p class="popup-coupon-code">YUGE10</p>
       </div>
-     <button class="popup-btn" onclick="closePopup(); location.href='#plans'">プランを見る →</button>
+     <button class="popup-btn">プランを見る →</button>
      <button class="popup-close" onclick="closePopup()">閉じる</button>
     </div>
   </div>
@@ -71,15 +71,19 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-img" src="img/hero.jpg" alt="湯気YUGE Sauna &amp; Spa 神田 サウナ室内観 — 国産杉ベンチと間接照明">
+  <div class="hero-slides">
+    <img class="hero-img active" src="img/hero.jpg" alt="湯気YUGE神田 サウナ室内観">
+    <img class="hero-img" src="img/sauna_door.jpg" alt="低温メディテーションサウナ">
+    <img class="hero-img" src="img/womens_sauna.jpg" alt="女性専用やわらかロウリュ">
+  </div>
   <div class="hero-overlay"></div>
- <div class="hero-content">
-  <p class="hero-catch">10th Anniversary</p>
-  <h1 class="hero-headline">都会の片隅に、<br><em>静かな熱</em>がある。</h1>
-  <p class="hero-sub">YUGE SAUNA &amp; SPA 神田 — 開業10周年</p>
-  <img class="hero-logo" src="img/logo.png" alt="湯気 YUGE">
-  <a class="hero-cta" href="#plans">記念プランを見る</a>
- </div>
+  <div class="hero-content">
+    <p class="hero-catch">10th Anniversary</p>
+    <h1 class="hero-headline">都会の片隅に、<br><em>静かな熱</em>がある。</h1>
+    <p class="hero-sub">YUGE SAUNA &amp; SPA 神田 — 開業10周年</p>
+    <img class="hero-logo" src="img/logo.png" alt="湯気 YUGE">
+    <a class="hero-cta" href="#plans">記念プランを見る</a>
+  </div>
 </section>
 
 <!-- CAMPAIGN BAND -->

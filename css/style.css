@@ -283,14 +283,34 @@ body {
   min-height: 600px;
   overflow: hidden;
 }
+
 .hero-img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
 }
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slides .hero-img {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  position: absolute;
+}
+.hero-slides .hero-img.active {
+  opacity: 1;
+}
+.hero-overlay { z-index: 1; }
+.hero-content { z-index: 2; }
+
 .hero-overlay {
   position: absolute; inset: 0;
+  z-index: 1; /* ← 追加 */
   background: linear-gradient(to bottom,
     rgba(26,22,18,0.55) 0%,
     rgba(26,22,18,0.3) 35%,
@@ -306,7 +326,9 @@ body {
   justify-content: center;
   padding: 60px 24px 80px;
   text-align: center;
+  z-index: 2; /* ← 追加 */
 }
+
 .hero-catch {
   font-family: var(--font-latin);
   font-size: 11px;
@@ -604,6 +626,10 @@ footer { background: #111; padding: 28px 24px 100px; text-align: center; border-
 /* ===== タブレット〜 (768px以上) ===== */
 @media (min-width: 768px) {
 
+  .btn-reserve {
+    max-width: 280px; /* ← 数字はお好みで調整 */
+  }
+
   /* 幅の上限を解除してセンタリング */
   body {
     max-width: 100%;
@@ -844,4 +870,14 @@ footer { background: #111; padding: 28px 24px 100px; text-align: center; border-
   .access-inner { padding: 0 80px; gap: 60px; }
   .access-map { height: 400px; }
 
+}
+
+/* タップ時のフィードバック */
+.btn-reserve:active,
+.rv-submit:active,
+.hero-cta:active,
+.popup-btn:active,
+.line-btn:active {
+  transform: scale(0.98);
+  filter: brightness(0.9);
 }
