@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご予約｜湯気 YUGE Sauna &amp; Spa 神田</title>
+<meta name="description" content="湯気 YUGE Sauna &amp; Spa 神田のオンライン予約ページ。10周年記念キャンペーン実施中。クーポンコード「YUGE10」入力で最大20%OFF。">
+<link rel="canonical" href="https://yuge-sauna.jp/reservation.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ご予約｜湯気 YUGE Sauna &amp; Spa 神田">
+<meta property="og:description" content="湯気 YUGE Sauna &amp; Spa 神田のオンライン予約。10周年記念キャンペーン最大20%OFF実施中。">
+<meta property="og:url" content="https://yuge-sauna.jp/reservation.html">
+<meta property="og:image" content="https://yuge-sauna.jp/img/og-image.jpg">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reservation.css">
+</head>
+<body>
+
+<!-- STICKY BANNER -->
+<div class="sticky-banner">
+  <span class="sticky-banner-dot"></span>
+  <span class="sticky-banner-text">🎉 10周年記念キャンペーン実施中 &nbsp;|&nbsp; 11/1〜12/15 最大20%OFF</span>
+  <span class="sticky-banner-dot"></span>
+</div>
+
+<div class="body-wrap">
+
+  <!-- ヘッダー -->
+  <header class="rv-header">
+    <a href="index.html" class="rv-back">← トップへ戻る</a>
+    <img src="img/logo.png" alt="湯気 YUGE" class="rv-logo">
+  </header>
+
+  <main class="rv-main">
+    <div class="sec-header">
+      <span class="sec-en">Reservation</span>
+      <h1 class="sec-ja">ご予約</h1>
+      <div class="sec-line"></div>
+    </div>
+
+    <!-- キャンペーン帯 -->
+    <div class="rv-campaign">
+      <p class="rv-campaign-code">クーポンコード：<strong>YUGE10</strong></p>
+      <p class="rv-campaign-note">予約フォームに入力で最大20%OFF</p>
+    </div>
+
+    <!-- フォーム -->
+    <form id="rv-form" novalidate>
+
+      <!-- お名前 -->
+      <div class="rv-field">
+        <label class="rv-label" for="name">
+          お名前 <span class="rv-required">必須</span>
+        </label>
+        <input
+          class="rv-input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="山田 太郎"
+          autocomplete="name"
+        >
+        <p class="rv-error" id="err-name"></p>
+      </div>
+
+      <!-- メールアドレス -->
+      <div class="rv-field">
+        <label class="rv-label" for="email">
+          メールアドレス <span class="rv-required">必須</span>
+        </label>
+        <input
+          class="rv-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          autocomplete="email"
+        >
+        <p class="rv-error" id="err-email"></p>
+      </div>
+
+      <!-- 電話番号 -->
+      <div class="rv-field">
+        <label class="rv-label" for="tel">
+          電話番号 <span class="rv-required">必須</span>
+        </label>
+        <input
+          class="rv-input"
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="09012345678"
+          autocomplete="tel"
+        >
+        <p class="rv-error" id="err-tel"></p>
+      </div>
+
+      <!-- プラン選択 -->
+      <div class="rv-field">
+        <label class="rv-label" for="plan">
+          ご利用プラン <span class="rv-required">必須</span>
+        </label>
+        <div class="rv-select-wrap">
+          <select class="rv-select" id="plan" name="plan">
+            <option value="">— 選択してください —</option>
+            <option value="10周年パック（90分）¥1,600">🎉 10周年パック（90分）¥1,600 ← 20%OFF</option>
+            <option value="ペア割（120分）¥4,600">👥 ペア割（120分）¥4,600 ← ¥1,000OFF</option>
+            <option value="朝活ととのい（90分）¥1,400">🌅 朝活ととのい（90分）¥1,400 ← 先着20名</option>
+            <option value="平日90分 ¥2,000">平日 90分 ¥2,000</option>
+            <option value="平日120分 ¥2,800">平日 120分 ¥2,800</option>
+            <option value="土日祝90分 ¥2,300">土日祝 90分 ¥2,300</option>
+            <option value="土日祝120分 ¥3,100">土日祝 120分 ¥3,100</option>
+          </select>
+        </div>
+        <p class="rv-error" id="err-plan"></p>
+      </div>
+
+      <!-- 希望日 -->
+      <div class="rv-field">
+        <label class="rv-label" for="date">
+          ご希望日 <span class="rv-required">必須</span>
+        </label>
+        <input
+          class="rv-input"
+          type="date"
+          id="date"
+          name="date"
+        >
+        <p class="rv-error" id="err-date"></p>
+      </div>
+
+      <!-- 希望時間帯 -->
+      <div class="rv-field">
+        <label class="rv-label" for="time">
+          ご希望時間帯 <span class="rv-required">必須</span>
+        </label>
+        <div class="rv-select-wrap">
+          <select class="rv-select" id="time" name="time">
+            <option value="">— 選択してください —</option>
+            <option value="07:00〜10:00（朝活）">07:00〜10:00（朝活）</option>
+            <option value="10:00〜13:00">10:00〜13:00</option>
+            <option value="13:00〜16:00">13:00〜16:00</option>
+            <option value="16:00〜19:00">16:00〜19:00</option>
+            <option value="19:00〜22:00">19:00〜22:00</option>
+            <option value="22:00〜24:00">22:00〜24:00</option>
+          </select>
+        </div>
+        <p class="rv-error" id="err-time"></p>
+      </div>
+
+      <!-- 人数 -->
+      <div class="rv-field">
+        <label class="rv-label" for="guests">
+          人数 <span class="rv-required">必須</span>
+        </label>
+        <div class="rv-select-wrap">
+          <select class="rv-select" id="guests" name="guests">
+            <option value="">— 選択してください —</option>
+            <option value="1">1名</option>
+            <option value="2">2名</option>
+            <option value="3">3名</option>
+            <option value="4">4名以上（要お問い合わせ）</option>
+          </select>
+        </div>
+        <p class="rv-error" id="err-guests"></p>
+      </div>
+
+      <!-- クーポンコード -->
+      <div class="rv-field">
+        <label class="rv-label" for="coupon">
+          クーポンコード <span class="rv-optional">任意</span>
+        </label>
+        <input
+          class="rv-input rv-input--coupon"
+          type="text"
+          id="coupon"
+          name="coupon"
+          placeholder="YUGE10"
+          maxlength="20"
+        >
+        <p class="rv-hint">10周年キャンペーンは「YUGE10」を入力</p>
+      </div>
+
+      <!-- ご要望 -->
+      <div class="rv-field">
+        <label class="rv-label" for="message">
+          ご要望・アレルギー等 <span class="rv-optional">任意</span>
+        </label>
+        <textarea
+          class="rv-textarea"
+          id="message"
+          name="message"
+          placeholder="ご自由にご記入ください"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <!-- 注意事項 -->
+      <div class="rv-notes">
+        <p class="rv-notes-title">ご予約の注意事項</p>
+        <ul class="rv-notes-list">
+          <li>前日23:59までにオンライン予約をお願いします</li>
+          <li>キャンセルは入館2時間前まで無料</li>
+          <li>無断キャンセルは次回以降の予約を制限させていただきます</li>
+          <li>刺青・泥酔の方のご入館はお断りしております</li>
+          <li>小学生以下のご入館はできません</li>
+        </ul>
+      </div>
+
+      <!-- 送信ボタン -->
+      <button class="rv-submit" type="submit" id="rv-submit">
+        予約を確定する
+      </button>
+
+    </form>
+
+    <!-- 送信完了メッセージ（初期非表示） -->
+    <div class="rv-success" id="rv-success">
+      <div class="rv-success-icon">✓</div>
+      <h2 class="rv-success-title">ご予約を受け付けました</h2>
+      <p class="rv-success-text">
+        ご登録のメールアドレスに確認メールをお送りしました。<br>
+        確認後、改めてご連絡いたします。
+      </p>
+      <a href="index.html" class="rv-success-btn">トップへ戻る</a>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/reservation.js"></script>
+</body>
+</html>
